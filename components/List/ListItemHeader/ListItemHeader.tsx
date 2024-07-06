@@ -21,6 +21,7 @@ export default function ListItemHeader({ item, lang }: ListItemHeaderProps) {
   return (
     <>
       {item.levelItem > 1 && <em className="ilv">{item.levelItem}</em>}
+      // @coderabbitai
       <Link href="/market/[itemId]" as={`/market/${item.id}`}>
         <a className={`rarity-${item.rarity}`}>{item.name}</a>
       </Link>
