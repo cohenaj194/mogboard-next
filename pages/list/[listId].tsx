@@ -230,6 +230,7 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
       }
     } catch (err) {
       console.error(err);
+      return { notFound: true }; // Handle errors by returning notFound
     }
   }
 
@@ -237,5 +238,4 @@ export async function getServerSideProps(ctx: GetServerSidePropsContext) {
     props: { list, reqIsOwner, ownerName },
   };
 }
-
 export default List;
